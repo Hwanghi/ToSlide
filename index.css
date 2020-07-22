@@ -11,7 +11,7 @@ body {
 header {
   display: grid;
   grid-template-columns: 80% 20%;
-  place-items: center end;
+  place-items: start end;
 
 }
 
@@ -73,7 +73,8 @@ button {
 }
 
 .nav-button {
-  min-width: 50px;
+  margin-top: 15px;
+  height: 40px;
 }
 
 .button1 {
@@ -88,11 +89,16 @@ button {
     border-radius: 8px;
     background-color: #4831f3;
 }
-.row {
+.row{
     font-family: Roboto;
-    font-weight: bold;
+    font-weight: 700;
     font-stretch: normal;
     font-style: normal;
+}
+
+.box2 .row{
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .boxes ul{
@@ -105,7 +111,7 @@ button {
 .manual {
     border-radius: 20px;
     background-color: rgba(63, 63, 234, 0.2);
-    padding: 8%;
+    padding: 4%;
     margin : 1.5%;
 }
 .manual img {
@@ -162,6 +168,10 @@ button {
     .boxes ul{
         display: flex;
         flex-direction: column;
+    }
+
+    .nav-button {
+      height: 30px;
     }
 
 }
