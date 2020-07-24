@@ -63,7 +63,8 @@ button {
 
 .lang {
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.26;
@@ -80,8 +81,7 @@ button {
 .button1 {
     font-family: 'Roboto';
     display: inline-block;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding: 8%;
     font-size: 1rem;
     text-align: center;
     color:white;
@@ -96,9 +96,13 @@ button {
     font-style: normal;
 }
 
+.box2 {
+    padding-top:4%;
+}
 .box2 .row{
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  
 }
 
 .boxes ul{
@@ -111,16 +115,20 @@ button {
 .manual {
     border-radius: 20px;
     background-color: rgba(63, 63, 234, 0.2);
-    padding: 4%;
+    padding: 7%;
     margin : 1.5%;
 }
 .manual img {
-    height: 10%;
+    height: 5%;
     max-height: 90px;
 }
 
+.top {
+  padding-top:5%;  
+}
 .sign p{
     padding-top: 5%;
+    padding-bottom: 15%;
     font-size: 1.3rem;
     font-family: Roboto;
     font-weight: bold;
@@ -146,7 +154,15 @@ button {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
 }
+.right2 {
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
 
+}
 .pdf {
     margin-right: 1.5%;
 }
@@ -157,21 +173,30 @@ button {
 
 @media ( min-width: 992px){
     .translate-img{
-        width: 100px;
+        width: 90px;
     }
 }
 @media screen and (max-width: 790px) {
     .navbar-item{
         text-align: right;
     }
-
+    .participate {
+        justify-content: center;
+        padding-top: 8%;
+    }
+    .description {
+        padding-left: 12%;
+    }
     .boxes ul{
         display: flex;
         flex-direction: column;
     }
-
+    .lang {
+        font-size: 2rem;
+    }
     .nav-button {
-      height: 30px;
+      width:100%;
+      height: auto;
     }
 
 }
