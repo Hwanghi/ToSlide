@@ -1,16 +1,26 @@
-html, body {
+html, body, ul {
     margin:0;
+    padding:0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3f3fea;
+}
 body {
     margin-top: 1%;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 80% 20%;
-  place-items: start end;
-
+    display: grid;
+    grid-template-columns: 80% 20%;
+    place-items: start end;
+    
 }
 
 li {
@@ -20,6 +30,12 @@ li {
 button {
     border: none;
     text-decoration: none;
+}
+
+hr {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 1px;
+    margin: 5%;
 }
 
 .navbar {
@@ -71,8 +87,8 @@ button {
 }
 
 .nav-button {
-  margin-top: 15px;
-  height: 40px;
+    margin-top: 15px;
+    height: 40px;
 }
 
 .button1 {
@@ -97,12 +113,12 @@ button {
     padding-top:4%;
 }
 .box2 .row{
-  font-size: 1.3rem;
-  line-height: 1.5;
-  
+    font-size: 1.3rem;
+    line-height: 1.5;
+    
 }
 
-.boxes ul{
+.boxes{
     padding: 0;
     margin: 0;
     display: grid;
@@ -110,19 +126,21 @@ button {
     
 }
 
+
+
 .manual {
-    
     padding-left: 5%;
     padding-bottom: 5%;
     margin: 2.5%;
     height: 30vh;
-    min-height: 220px;
+    min-height: 230px;
     border-radius: 20px;
     background-color: rgba(63, 63, 234, 0.2);
 }
 .manual img {
     margin: 5%;
     height: 10vh;
+    min-height: 80px;
 }
 
 .sign p{
@@ -160,7 +178,7 @@ button {
     line-height: 2;
     letter-spacing: normal;
     text-align: left;
-
+    
 }
 .pdf {
     margin-right: 1.5%;
@@ -200,11 +218,11 @@ button {
 }
 
 .chart {
-   padding: 10%;
-   margin: 2.5%;;
-   border-radius: 12px;
-   background-color: white;
-   box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.3);
+    padding: 10%;
+    margin: 2.5%;;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.3);
 }
 .chart .title {
     font-size: 1.3rem;
@@ -219,15 +237,54 @@ button {
     justify-content: center;
 }
 
+/*review tab*/
+.partition{
+    margin-top: 5%;
+}
+
+.boxes2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin: 5%;
+}
+
+i .unknown {
+    width: 50%;
+    max-width: 200px;
+}
+
+ul .text{
+    margin-top: 5%;
+    margin-right: 5%;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.quotes {
+    margin-left: 5%;
+}
+
 footer {
     padding-left: 5%;
     padding-right: 5%;
     background-color: #b1b1f7;
 }
 @media ( min-width: 826px){
-   .manual {
-       height: auto;
-   }
+    .manual {
+        height: auto;
+    }
 }
 @media screen and (max-width: 825px) {
     .navbar-item{
@@ -242,14 +299,14 @@ footer {
         font-size: 2rem;
     }
     .nav-button {
-      width:100%;
-      height: auto;
+        width:100%;
+        height: auto;
     }
-    .boxes ul{
+    .boxes{
         display: flex;
         flex-direction: column;
     }
-
+    
     .strong {
         font-size: 1rem;
     }
@@ -263,15 +320,16 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
-    .strong {
-        font-size: vw;
-    }
+    
     .accent {
         font-size: 1.5vw;
     }
     .lang {
         font-size: 1.5rem;
     }
+    .sign p{
+        font-size: 1rem;
+    }
     
-
+    
 }
