@@ -1,10 +1,8 @@
-html {
+html, body {
     margin:0;
 }
 
 body {
-    margin-left: 4%;
-    margin-right: 4%;
     margin-top: 1%;
 }
 
@@ -109,22 +107,24 @@ button {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    
 }
 
 .manual {
+    
+    padding-left: 5%;
+    padding-bottom: 5%;
+    margin: 2.5%;
+    height: 30vh;
+    min-height: 220px;
     border-radius: 20px;
     background-color: rgba(63, 63, 234, 0.2);
-    padding: 7%;
-    margin : 1.5%;
 }
 .manual img {
-    height: 5%;
-    max-height: 90px;
+    margin: 5%;
+    height: 10vh;
 }
 
-.top {
-  padding-top:5%;  
-}
 .sign p{
     padding-top: 5%;
     padding-bottom: 15%;
@@ -219,12 +219,15 @@ button {
     justify-content: center;
 }
 
-
-@media ( min-width: 992px){
-    .translate-img{
-        width: 90px;
-    }
-    
+footer {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #b1b1f7;
+}
+@media ( min-width: 826px){
+   .manual {
+       height: auto;
+   }
 }
 @media screen and (max-width: 825px) {
     .navbar-item{
@@ -253,13 +256,20 @@ button {
     .accent {
         font-size: 1.6rem;
     }
+    
+    .sign p{
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    
-    
+    .strong {
+        font-size: vw;
+    }
+    .accent {
+        font-size: 1.5vw;
+    }
     .lang {
-
         font-size: 1.5rem;
     }
     
