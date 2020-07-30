@@ -1,0 +1,66 @@
+:root {
+    --sky-blue:#3f3fea;
+    --purple-blue:rgba(63, 63, 234, 0.2);
+    --purpleley-blue: #403fea;
+    --very-large-font-size: 3rem;
+    --large-font-size: 1.9rem;
+    --middle-font-size: 1.3rem;
+    --small-font-size: 0.95rem;
+    --very-small-font-size: 0.7rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-weight: bold;
+    font-family: Roboto;
+    width:100%;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #000000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3f3fea;
+}
+hr {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 1px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+button {
+    background: inherit; 
+    border:none; 
+    box-shadow:none; 
+    border-radius:0; 
+    padding:0; 
+    overflow:visible; 
+    cursor:pointer;
+    outline: none;
+}
+input {
+    all:unset;
+}
+input::placeholder {
+    color: #575757;
+    padding: 5px 20px;
+}
+/* basci init */
