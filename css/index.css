@@ -204,11 +204,19 @@ header {
     max-width: 761px;
 }
 
-i .unknown {
-    width: 50%;
-    max-width: 200px;
+.unknown {
+    width: 200px;
+    margin: 3%;
+    margin-top: 0;
+    text-align: center;
 }
-
+.speech {
+    padding: 5%;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+}
 ul .text{
     margin-top: 8%;
     margin-right: 5%;
