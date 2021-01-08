@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+}
+
+.main {
+    height: 100vh;
+}
+
+.fixed-bottom {
+    position: fixed; 
+    bottom: 0;
+}
