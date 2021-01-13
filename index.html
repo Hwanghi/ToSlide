@@ -4,16 +4,16 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <!-- Custom CSS-->
   <link rel="stylesheet" href="css/basic.css">
-
+  <link rel="stylesheet" href="css/index.css">
   <!-- Font -->
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
   <title>Toslide.</title>
   
@@ -67,417 +67,51 @@ div a  {cursor: pointer;}
   </style>
 </head>
 <body>
-<div id="loader" style="display: none;"></div>
-<script>
-	document.getElementById("loader").style.display = "block";
-</script>
-<label id="version" style="display:none">(v.3.7.4)</label>
-<div id="video_dialog" class="modal_prompt_new" style="width:100%;display:none">
-		<div id="video_content" class="modal-content-prompt_new" style="border-radius: 20px;width:70%;">
-		<center>
-		<table class="items_padding" style="width:95%;height:100%">
-			<tbody><tr>
-				<td width="10%"></td>
-				<td align="center" colspan="3">
-	  		<b><label style="padding-top:20px;width:100%;font-family:Roboto;font-size: 16px;" id="confirmation_str"></label></b><br>
-	  	</td>
-	  	<td width="10%" align="right">
-				<input type="image" style="display:block;background:transparent" src="./main/services/images_en/close_window.png?a=10" width="16" onclick="close_video()">
-			</td>	
-		
-			</tr>
-			<tr>
-				<td colspan="5" align="center">
-					
-					<iframe id="video_iframe" width="100%" height="400" src="" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe> 
-          
-			</td>	
-			</tr>
-			<tr>
-			 	<td width="10%"></td>
-       <td align="right"><button class="button2 mr-3" id="video_for_lecture" style="display:none;outline: none;width:100%;height:35px;border-radius: 12px; font-size: 15px;" onclick="video_for_lecturer();">Lecturer</button></td>				
-       	<td width="2%"></td>
-       <td align="left"><button class="button2 mr-3" id="video_for_audience" style="display:none;outline: none;width:100%;height:35px;" onclick="video_for_audience();">Audience</button></td>
-	  		<td width="10%"></td>
-	  		
-	  	</tr>
-	  	
-		  <tr>
-		  <td colspam="5" style="padding-bottom:15px;"></td></tr>	
-				
-		  
-	  </tbody></table>
-	</center>
-		</div>
-</div>
 
-<nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:white;">
+<!-- navigation bar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
 	<div class="container-fluid">
-		<img src="img/logo.png" width="128px">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a href="#" class="nav-link" onclick="open_pdf('1','https://drive.google.com/file/d/1PrgIushBiiRWZICkU7J6BBvuU3dNkhYm/preview?a=140')">청중 질의응답 시스템</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" onclick="open_pdf('2','https://drive.google.com/file/d/1VwmJkSnX77PYx_B8cWOmbzxVHrHWav9K/preview?a=300')">온라인 강의</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" onclick="open_pdf('3','https://drive.google.com/file/d/1PSrTT1arkrI-4WmNFxpTfzvzizoJwBch/preview?a=300')">온라인 시험</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" onclick="window.open('https://photos.app.goo.gl/NEZJqsTg6GyfcBeZA')">사진</a>
-				</li>
+	  <a class="navbar-brand" href="#"><img src="img/main/toslide logo.svg" alt="" width="120vw"></a>
+	  <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+		<ul class="navbar-nav mb-2 mb-md-0">
+		  <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">청중 질의응답 시스템</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">온라인 강의</a>
+		  </li>
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				온라인 시험
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Action</a></li>
+			  <li><a class="dropdown-item" href="#">Another action</a></li>
+			  <li><hr class="dropdown-divider"></li>
+			  <li><a class="dropdown-item" href="#">Something else here</a></li>
 			</ul>
-			<ul class="navbar-nav ml-5">
-				<img src="img/eng.png" class="translate-img " width="100px" onclick="change_text()">
-			</ul>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#" tabindex="-1">사진</a>
+		  </li>
+		</ul>
+	  </div>
+	  <!-- translator button -->
+	<button type="button" class="btn btn-outline-primary position-absolute top-3 end-0 me-3"><i class="bi bi-globe2 me-1"></i>Eng</button>
 	</div>
-  </nav>
+</nav>
 
-<!--main page-->
-<main class="container-fluid" style="background-image: url('img/background.svg');">
-	<div class="row">
-		<div class="col col-xs-12 col-sm-8 col-md-8 col-xl-8 align-items-center">
-			<div class="row slogan mb-3">
-				<h1 style="color: white;">
-					Large Audience into <br>
-					Active Contributors
-				</h1>
-			</div>
-			<div class="row slogan">
-				<p style="color:white;">Hongik DMP Labs + Sunny Graphy Inc.</p>
-			</div>
-			<div class="row enter-btn btn-toolbar">
-				<button type="button" class="btn btn-outline-light btn-lg mr-3">강사</button>
-				<button type="button" class="btn btn-outline-light btn-lg ">청중</button>
-			</div>
-		</div>
-		<div class="col col-xs-12 col-sm-4 col-md-4 col-xl-4">
-			<div class="row p-3">
-				<button type="button" class="manual container-fluid ml-5 mr-5 p-3">
-				<img src="img/QA.png" alt="">
-				<p>Audience Q&A System</p>
-				</button>
-			</div>
-			<div class="row p-3">
-				<button type="button" class="manual container-fluid ml-5 mr-5 p-3">
-				<img src="img/exam.png" alt="">
-				<p style="color: var(--toslide-dark-blue);">Online Narrative Exam</p>
-				</button>
-			</div>
-			<div class="row p-3">
-				<button type="button" class="manual container-fluid ml-5 mr-5 p-3" min-width="150px">
-				<img src="img/lecture.png" alt="">
-				<p style="color: var(--toslide-dark-blue);">Online Lecture</p>
-				</button>
-			</div>
-		</div>
-	</div>
-</main>
   
 
 
 
 <!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="./sangjin/index_v2.js?a=155"></script>
-<script>
-	
-	function adjust_appearance()
-	{
-		
-		if(is_mobile())
-		{
-			
-			document.getElementById("shy_div").style.fontSize = "25px";
-			document.getElementById("contact_div").style.fontSize = "18px";
-			document.getElementById("dmp_div").style.fontSize = "18px";
-			
-			
-		}
-	}
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
 
-	function is_mobile()
-	{
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		             
-		           return true;
-		             
-		}
-		
-		if (typeof window.orientation !== 'undefined') 
-		{
-			 return true;
-		}
-		
-		var iOSios = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-		if(iOSios)
-		 return true;
-		 
-		return false;    
-				
-	}
-	function is_firefox()
-	{
-		var agent = navigator.userAgent;
-		agent = agent.toLowerCase();
-		if(agent.indexOf("firefox") != -1)
-		{
-			console.log("firefox");
-		 return true;
-		}
-		else
-		{
-			console.log("not firefox");
-			return false; 
-		}
-	}
-	
-	var third_party_cookie_enabled = false;
-  var display_alert = false;
-  var is_signin_page = true;
-  
-  
-  var already_server_is_running = false;
-	function storageEventHandlerFunc(evt) {
-	   
-	  if(evt.key =="to_client")
-	  {
-	  	if(evt.newValue == "server is running")
-	   	{
-	   		
-	   		//window.removeEventListener("storage", storageEventHandlerFunc, false);
-	   		
-	   		/*
-	   		localStorage.setItem('to_client', "from_client");
-  			localStorage.removeItem('to_server');
-  			localStorage.setItem('to_server', "are you running");
-	   		*/
-	   		
-	   		current_web_region = navigator.language;
-        
-        
-        if(already_server_is_running)
-        {
-        	document.getElementById("customBtn_client_dummy").style.display ="block";
-					document.getElementById("customBtn_client").style.display ="none";
-	      	document.getElementById("customBtn_client_dummy").disabled = false; 
-        	localStorage.setItem('to_client', "from_client");
-  				//localStorage.removeItem('to_server');
-  				localStorage.setItem('to_server', "are you running");
-         	return;
-        }
-         
-         
-        
-        already_server_is_running =true;
-        
-        document.getElementById("customBtn_client_dummy").style.display ="block";
-				document.getElementById("customBtn_client").style.display ="none";
-	      document.getElementById("customBtn_client_dummy").disabled = false; 
-				//msg_for_server_is_running();
-	   		
-	   		
-	   	
-	  	}
-	  	else
-	  	{
-	  		document.getElementById("customBtn_client_dummy").style.display ="none";
-				document.getElementById("customBtn_client").style.display ="block";
-	   	 	//window.removeEventListener("storage", storageEventHandlerFunc, false);
-	   		//localStorage.removeItem('to_client');
-	  	}
-	  }
-	  
-	   return;
-	   	var a = localStorage.getItem("to_client");
-	   	
-	   	if(a == "server is running")
-	   	{
-	   		
-	   		//window.removeEventListener("storage", storageEventHandlerFunc, false);
-	   		
-	   		/*
-	   		localStorage.setItem('to_client', "from_client");
-  			localStorage.removeItem('to_server');
-  			localStorage.setItem('to_server', "are you running");
-	   		*/
-	   		
-	   		current_web_region = navigator.language;
-        
-        
-        if(already_server_is_running)
-        {
-        	document.getElementById("customBtn_client_dummy").style.display ="block";
-					document.getElementById("customBtn_client").style.display ="none";
-	      	document.getElementById("customBtn_client_dummy").disabled = false; 
-        	localStorage.setItem('to_client', "from_client");
-  				//localStorage.removeItem('to_server');
-  				localStorage.setItem('to_server', "are you running");
-         	return;
-        }
-         
-         
-        
-        already_server_is_running =true;
-        
-        document.getElementById("customBtn_client_dummy").style.display ="block";
-				document.getElementById("customBtn_client").style.display ="none";
-	      document.getElementById("customBtn_client_dummy").disabled = false; 
-				msg_for_server_is_running();
-	   		
-	   		
-	   	
-	  	}
-	  	else if(a =="from_client")
-	  	{
-	  		
-	  		document.getElementById("customBtn_client_dummy").style.display ="none";
-				document.getElementById("customBtn_client").style.display ="block";
-	   	 	//window.removeEventListener("storage", storageEventHandlerFunc, false);
-	   		//localStorage.removeItem('to_client');
-	   	 	
-	  		
-	  	}
-	  	
-	   
-	   
-	}
-	
-	
-  window.onload = function() {
-  	
-  	if(!is_mobile())
-  	{
-  		window.addEventListener('storage', storageEventHandlerFunc, false);
-  		localStorage.setItem('to_client', "from_client");
-  		localStorage.removeItem('to_server');
-  		localStorage.setItem('to_server', "are you running");
-  	}
-  	else
-  	{
-  		document.getElementById("customBtn_controller").style.display = "block";
-  		document.getElementById("customBtn").style.display = "none";
-  		
-  	}
-  	
-  	document.getElementById("customBtn_client_dummy").disabled =true;
-  	document.getElementById("loader").style.display = "none";
-  	
-  	
-  	
-  	
-  	current_web_region = navigator.language;
-   
-		if(current_web_region.indexOf("ko") != -1)
-		{
-			change_text();
-		  current_web_region = "ko";
-		  wos_content_kr();
-		  	//document.getElementById("customBtn_client_dummy").innerHTML = "筌?夷?;
-		}
-		else
-		{
-			wos_content_en();
-			current_web_region = "en";
-			document.getElementById("customBtn_client_dummy").innerHTML = "Audience";
-			
-			
-			
-		}			  	
-  	
-  	
-  	
-  	var receiveMessage = function (evt) {
-  	
-  	//if(isEdge_new())
-  	//{
-  	//	alert("Please use other browser");
-  	//	return;
-  	//}
-  	 
-	 	 if(display_alert)
-	 	  return;
-	 	  
-	 	  //console.log(evt.data);  
-	 	 	try
-	 	 	{
-		 	 if (evt.data.indexOf('error') != -1) {
-		 	  	
-		 	  	if(is_mobile())
-		 	  	 return;
-		 	  	 
-		 	  	 
-		 	  	if(is_firefox())
-		 	  	{
-		 	  		console.log("fox");
-		 	  		return;
-		 	  	}	
-		 	  	
-		 	  	 
-		 	  	
-		   		display_alert = true;
-		   		third_party_cookie_enabled = false;
-		   		
-		   		try
-		   		{
-		   			if(isEdge())
-		   			{
-		   					   				
-		   				//waringing_thirdpart_cookie_for_edge();
-		   			}
-		   			
-		   		}
-		   		catch(err)
-		   		{
-		   		}
-		   		
-	
-		   }
-		   else
-		   {
-		   		
-		   	third_party_cookie_enabled = true;
-		   } 	 	 		
-	 		}
-	 		catch(err)
-	 		{
-	 			
-	 		} 
-	 	  //console.log(evt.data);
-
-	 };
-	 
-	 
-	 	window.addEventListener("message", receiveMessage, false);
-  	
-  	
-  	adjust_appearance();
-  	document.getElementById("loader").style.display = "none";
-  	//startApp();
-  	
-    //initApp();
-   	
-	 
-  
-  };
-
-	
-</script>    
-<script type="text/javascript" src="./auth_manage/firebase_main.js?a=1259"></script>
-
-
-<iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Ftoslide.com&amp;rpcToken=823601932.2945246" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;"></iframe>
 </body>
 </html>
