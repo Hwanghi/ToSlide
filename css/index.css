@@ -17,7 +17,13 @@
     --padding-middle: 1rem;
     --padding-large: 2rem;
 }
-
+main {
+    margin:0;
+}
+nav{
+    padding-left: 40px;
+    padding-right: 40px;
+}
 .btn {
     border-radius: 10px;
 }
@@ -47,14 +53,6 @@
     max-width: 200px;
 }
 
-main {
-    padding-top:10%;
-    padding-bottom: 5%;
-}
-nav{
-    padding-left: 40px;
-    padding-right: 40px;
-}
 .row {
     justify-content:center;
 }
