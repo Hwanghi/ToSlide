@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    font-family: 'roboto' !important;
+}
+li {
+    padding: 0.5vw 0 0.5vw 0;
+    font-size:2vw;
+}
+ul {
+	position: relative;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+}
+.prepare-wrap {
+    margin-top: 15vh;
+    width: 60%;
+}
+.exam-section {
+    font-size:3vw;
+    font-weight: bold;
+}
+.logo {
+    width: auto;
+    height: 5vw;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 0;
+    margin: 0 1rem 0 1rem;
+}
+
+.btn-primary {
+    border: none !important;
+    background-color: #3f3fea !important;
+    font-size: 1.5vw !important;
+    width: 15vw !important;
+}
+
+.btn-primary:hover {
+    border: none !important;
+    background-color: gray !important;
+}
+
+.send > img {
+    margin: 0  0 0;
+    width: 2vw;
+    height: auto;
+}
