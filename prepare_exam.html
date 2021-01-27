@@ -14,10 +14,10 @@
   <title>Toslide Exam</title>
 </head>
 <body>
-  <div class="prepare-wrap container-fluid">
-    <header class="d-flex justify-content-center align-items-end py-5">
+  <div class="prepareWrap container-fluid">
+    <header class="d-flex justify-content-center align-items-end">
       <img src="img/exam/toslide_logo.png" class="logo" alt="To Slide"> 
-      <span class="exam-section">온라인 시험 대기</span>
+      <span class="sectionTitle">온라인 시험 대기</span>
     </header>
     <main class="d-flex justify-content-center">
       <ul>
@@ -26,16 +26,16 @@
           <button class="send btn btn-primary py-1"><img src="img/exam/send.png">메시지</button>
         </li>
         <li>2. Active window 다운 받고 설치하기
-          <button class="active-window btn btn-primary py-1">Active window</button>
+          <button class="activeWindow btn btn-primary py-1">Active window</button>
         </li>
         <li>3. 설치한 Active window 실행시키기
         </li>
-        <li id="lecturerId">- Lecturer ID : 강사 아이디 입력</li>
-        <li id="studentId">- Student ID   : 본인 학번 입력</li>
+        <li id="lecturerId">- Lecturer ID : <label for="lecturerId" id=lecturerLabel>toslide123456789@gmail.com</label></li>
+        <li id="studentId">- Student  ID   : <label for="studentId" id=studentLabel></label>B000000000</li>
       </ul>
     </main>
   </div>
-  <footer class="d-flex justify-content-end">
+  <footer class="container-fluid d-flex justify-content-end">
     <div class="btn-group dropup">
       <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         B0000000 김미주
@@ -47,7 +47,7 @@
         <li>B00000 KIM MIJU</li>
       </ul>
     </div>
-    <button class="active-window btn btn-primary py-1">Active window</button>
+    <button class="activWindow btn btn-primary py-1">Active window</button>
   </footer>
 </body>
 </html>

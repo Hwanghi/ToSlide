@@ -1,5 +1,7 @@
 html, body {
     height: 100%;
+    margin: 0;
+    overflow: hidden;
     font-family: 'roboto' !important;
 }
 li {
@@ -12,11 +14,19 @@ ul {
 	margin-left: 0;
 	padding-left: 1.2em;
 }
-.prepare-wrap {
+
+/* Footer */
+footer {
+    top: 90vh;
+    position: fixed;
+}
+
+/* main */
+.prepareWrap {
     margin-top: 15vh;
     width: 60%;
 }
-.exam-section {
+.sectionTitle {
     font-size:3vw;
     font-weight: bold;
 }
@@ -49,3 +59,4 @@ ul {
     width: 2vw;
     height: auto;
 }
+
