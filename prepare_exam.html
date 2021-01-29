@@ -14,40 +14,62 @@
   <title>Toslide Exam</title>
 </head>
 <body>
-  <div class="prepareWrap container-fluid">
-    <header class="d-flex justify-content-center align-items-end">
-      <img src="img/exam/toslide_logo.png" class="logo" alt="To Slide"> 
+    <header class="d-flex align-items-center">
+      <img src="img/exam/toslide_logo.png" class="logo m-3" alt="To Slide"> 
       <span class="sectionTitle">온라인 시험 대기</span>
     </header>
-    <main class="d-flex justify-content-center">
-      <ul>
-        <li>0. 시험에 불필요한 앱/프로그램 종료하기</li>
-        <li>1. 강사에게 질문/메시지 보내기 가능
-          <button class="send btn btn-primary py-1"><img src="img/exam/send.png">메시지</button>
-        </li>
-        <li>2. Active window 다운 받고 설치하기
-          <button class="activeWindow btn btn-primary py-1">Active window</button>
-        </li>
-        <li>3. 설치한 Active window 실행시키기
-        </li>
-        <li id="lecturerId">- Lecturer ID : <label for="lecturerId" id=lecturerLabel>toslide123456789@gmail.com</label></li>
-        <li id="studentId">- Student  ID   : <label for="studentId" id=studentLabel></label>B000000000</li>
-      </ul>
+    <main class="container-fluid ">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="prepareExam col-sm-3 col-xs-12">
+          <div class="imgBox box1">
+            <img src="./img/exam/closever3.png" class="img1">
+          </div>
+          <p class="command">시험에 불필요한 프로그램 종료하기</p>
+        </div>
+        <div class="arrow col-sm-1 col-xs-12">
+          <img src="./img/exam/arrow.png" >
+        </div>
+        <div class="prepareExam col-sm-3 col-xs-12">
+          <div class="imgBox box2 d-flex flex-column">
+            <button class="activeWindows btn btn-primary">Active Windows</button>
+            <div class="command">
+              <span>- Lecturer ID :</span>  
+              <label for="lecturerId">toslide123@gmail.com</label>
+            </div>
+            <div class="command">
+              <span>- Student  ID :</span>
+              <label for="studentId">B000000000</label>
+            </div>
+          </div>
+          <p class="command">Active Windows 설치하고 실행하기</p>
+        </div>
+        <div class="arrow col-sm-1 col-xs-12">
+          <img src="./img/exam/arrow.png" >
+        </div>
+        <div class="prepareExam col-sm-3 col-xs-12">
+          <div class="imgBox box3 d-flex flex-column">
+            <button class="sendMessage btn btn-primary" type="button" onclick="do_sending()">
+              <img src="./img/exam/send.png" class="btn-image">보내기
+            </button>
+            <img src="./img/exam/message.png" class="img3">
+          </div>
+          <p class="command">강사에게 메시지 보내기</p>
+        </div>
+      </div>
     </main>
-  </div>
-  <footer class="container-fluid d-flex justify-content-end">
-    <div class="btn-group dropup">
-      <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        B0000000 김미주
-      </button>
-      <ul class="dropdown-menu">
-        <!-- Dropdown menu links -->
-        <li>B00000 kim</li>
-        <li>B00000 MJ</li>
-        <li>B00000 KIM MIJU</li>
-      </ul>
-    </div>
-    <button class="activWindow btn btn-primary py-1">Active window</button>
-  </footer>
+    <footer class="container-fluid">
+      <div class="footerTop row d-flex justify-content-end ">
+        <span class="userInfoBox activeWindows btn btn-primary m-0 mx-1">Active windows</button>
+      </div>
+      <div class="footerBottom row d-flex justify-content-end">
+        <span class="userInfoBox">
+          <label for="lecturerId">toslide123@gmail.com</label>
+        </span>
+        <span class="userInfoBox">
+          <label for="studentId">B0000000</label>
+          <label for="studentName">황희대</label>
+        </span>
+      </div>
+    </footer>
 </body>
 </html>

@@ -1,62 +1,150 @@
-html, body {
-    height: 100%;
+
+    /* Layout Properties (position, float, clear, display)
+    Box Model Properties (width, height, margin, padding)
+    Visual Properties (color, background, border, box-shadow)
+    Typography Properties (font-size, font-family, text-align, text-transform)
+    Misc Properties (cursor, overflow, z-index) */
+ 
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    height: 100%;
     overflow: hidden;
     font-family: 'roboto' !important;
 }
-li {
-    padding: 0.5vw 0 0.5vw 0;
-    font-size:2vw;
+
+/* Buttons */
+.btn-primary {
+    margin-top: 1vh;
+    margin-bottom: 3.5vh;
+    background-color: #3f3fea !important;
+    border: none !important;
+    font-size: 1.5vh !important;
 }
-ul {
-	position: relative;
-	list-style: none;
-	margin-left: 0;
-	padding-left: 1.2em;
+
+.btn-primary:hover {
+    background-color: gray !important;
+    border: none;
+}
+
+.btn-image {
+    margin-right: 1vh;
+    width: 2vh;
+}
+
+/* Header */
+header {
+    position: relative;
+}
+header .sectionTitle {
+    font-size: 3vh;
+    font-weight: bold;
+}
+header .logo {
+   height: 5vh;
+}
+
+/* Main */ 
+.prepareExam {
+    width: 23vh;
+    padding: 0;
+    justify-content: center;
+}
+.prepareExam .imgBox {
+    height: 23vh;
+    border: 3px solid #3f3fea !important;
+    border-radius: 16px;
+    overflow: hidden;
+}
+/* 시험에 불필요한 .. Box */
+.prepareExam .box1 {
+    padding-top: 27%;
+    padding-right: 5%;
+}
+/* Active Windows .. Box */
+.prepareExam .box2 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/* 강사에게 메시지 .. Box */
+.prepareExam .box3 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.prepareExam .imgBox .img1 {
+    width: 100%;
+}
+.prepareExam .imgBox .img3 {
+    margin-left: 30%;
+    width: 75%;
+    height: 70%;
+}
+.prepareExam .command {
+    margin: 1.5vh 0 0 0;
+    font-size: 1.4vh;
+}
+.arrow {
+    height: 5vh;
+    text-align: center;
+}
+.arrow img{
+    height: 100%;
 }
 
 /* Footer */
 footer {
-    top: 90vh;
-    position: fixed;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	padding: 15px 0;
+	text-align: center;
 }
 
-/* main */
-.prepareWrap {
-    margin-top: 15vh;
-    width: 60%;
-}
-.sectionTitle {
-    font-size:3vw;
-    font-weight: bold;
-}
-.logo {
-    width: auto;
-    height: 5vw;
-}
-
-
-/* Buttons */
-.btn {
-    padding: 0;
-    margin: 0 1rem 0 1rem;
-}
-
-.btn-primary {
-    border: none !important;
-    background-color: #3f3fea !important;
+.userInfoBox {
+    width: 20vw;
+    margin: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 8px #0000001A;
+    border-radius: 5px;
     font-size: 1.5vw !important;
-    width: 15vw !important;
-}
+} 
 
-.btn-primary:hover {
-    border: none !important;
-    background-color: gray !important;
+@media (min-width: 576px) {
+    header {
+        margin: 10vh;
+    }
+    .btn-primary {
+        margin-top: 1vw;
+        margin-bottom: 4vw;
+        font-size: 1.2vw !important;
+    }
+    .btn-image {
+        margin-right: 1vw;
+        width: 1.5vw;
+    }
+    .prepareExam {
+        width: 20vw;
+        height: auto;
+    }
+    .prepareExam .imgBox {
+        height: 20vw;
+    } 
+    .prepareExam .command {
+        font-size: 1.2vw;
+    }
+    .arrow {
+        height: auto;
+        margin: 1vw;
+    }
+    .arrow img {
+        width: 100%;
+        height: auto;
+        transform: rotate(-90deg);
+    }
 }
-
-.send > img {
-    margin: 0  0 0;
-    width: 2vw;
-    height: auto;
-}
-
