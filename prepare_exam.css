@@ -21,10 +21,10 @@ html, body {
 /* Buttons */
 .btn-primary {
     margin-top: 1vh;
-    margin-bottom: 3.5vh;
+    padding:0;
     background-color: #3f3fea !important;
     border: none !important;
-    font-size: 1.5vh !important;
+    font-size: 1.5vh;
 }
 
 .btn-primary:hover {
@@ -42,21 +42,21 @@ header {
     position: relative;
 }
 header .sectionTitle {
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: bold;
 }
 header .logo {
-   height: 5vh;
+   height: 4vh;
 }
 
 /* Main */ 
 .prepareExam {
-    width: 23vh;
+    width: 22vh;
     padding: 0;
     justify-content: center;
 }
 .prepareExam .imgBox {
-    height: 23vh;
+    height: 22vh;
     border: 3px solid #3f3fea !important;
     border-radius: 16px;
     overflow: hidden;
@@ -66,30 +66,44 @@ header .logo {
     padding-top: 27%;
     padding-right: 5%;
 }
+.prepareExam .box1 .img1 {
+    width: 100%;
+}
+
 /* Active Windows .. Box */
 .prepareExam .box2 {
     padding-left: 10%;
     padding-right: 10%;
 }
+.prepareExam .box2 .idField {
+    margin-top: 1.3vh;
+    font-size: 1.3vh;
+}
+.prepareExam .box2 .lecturer {
+    margin-top: 30%;
+}
+
+
 /* 강사에게 메시지 .. Box */
 .prepareExam .box3 {
     padding-left: 10%;
     padding-right: 10%;
 }
-.prepareExam .imgBox .img1 {
-    width: 100%;
-}
-.prepareExam .imgBox .img3 {
+.prepareExam .box3 .img3 {
+    margin-top: 30%;
     margin-left: 30%;
     width: 75%;
     height: 70%;
 }
+
 .prepareExam .command {
-    margin: 1.5vh 0 0 0;
-    font-size: 1.4vh;
+    margin: 0.5vh 0 0 0;
+    text-align: center;
+    font-size: 1.3vh;
 }
 .arrow {
-    height: 5vh;
+    margin: 1vh 0 1vh 0;
+    height: 3vh;
     text-align: center;
 }
 .arrow img{
@@ -107,22 +121,22 @@ footer {
 }
 
 .userInfoBox {
-    width: 20vw;
+    width: 160px;
     margin: 5px;
+    padding: 5px;
     background-color: white;
     box-shadow: 0px 0px 8px #0000001A;
     border-radius: 5px;
-    font-size: 1.5vw !important;
+    font-size: 16px !important;
 } 
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     header {
         margin: 10vh;
     }
     .btn-primary {
         margin-top: 1vw;
-        margin-bottom: 4vw;
-        font-size: 1.2vw !important;
+        font-size: 1.5vw;
     }
     .btn-image {
         margin-right: 1vw;
@@ -134,17 +148,25 @@ footer {
     }
     .prepareExam .imgBox {
         height: 20vw;
-    } 
+    }
+    .prepareExam .imgBox .idField {
+        font-size: 1.2vw;
+    }
     .prepareExam .command {
+        margin: 1.5vh 0 0 0;
         font-size: 1.2vw;
     }
     .arrow {
         height: auto;
         margin: 1vw;
+        padding-top: 5vw;
     }
     .arrow img {
         width: 100%;
         height: auto;
         transform: rotate(-90deg);
+    }
+    .userInfoBox {
+        width: 20vw;
     }
 }
