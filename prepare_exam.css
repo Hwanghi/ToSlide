@@ -24,7 +24,7 @@ html, body {
     background-color: #3f3fea !important;
     border: none !important;
     border-radius: 7px !important;
-    font-size: 16px;
+    font-size: 1.5vh;
 }
 .btn-primary:hover {
     background-color: gray !important;
@@ -65,8 +65,8 @@ header .logo {
 }
 .prepareExam .imgBox button {
     margin-top: 8%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 /* 시험에 불필요한 .. Box */
@@ -129,8 +129,7 @@ footer {
 }
 
 .userInfoBox {
-    width: 18vw;
-    min-width: 165px;
+    width: 167px;
     margin-bottom: 1vh;
     margin-right: 1vh;
     padding-top: 1vh;
@@ -138,7 +137,7 @@ footer {
     background-color: white;
     box-shadow: 0px 0px 8px #0000001A;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     overflow: hidden;
 } 
 
