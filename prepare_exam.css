@@ -6,8 +6,13 @@
     Misc Properties (cursor, overflow, z-index) */
 
 :root {
-    --height-basic-font: 1.4vh;
-    --width-basic-font : 1.1vw;
+    --height-box-size   : 24vh;
+    --height-small-font : 1.5vh;
+    --height-basic-font : 1.9vh;
+
+    --width-box-size   : 16vw;
+    --width-small-font : 1vw;
+    --width-basic-font : 1.3vw;
 }
 * {
     margin: 0;
@@ -41,7 +46,7 @@ html, body {
 header {
     position: relative;
     margin-top: 2vh;
-    margin-left: 4%;
+    margin-left: 5%;
     margin-bottom: 2vh;
 }
 header .sectionTitle {
@@ -58,12 +63,12 @@ main {
     padding-bottom: 5%;
 }
 .prepareExam {
-    width: 23vh;
+    width: var(--height-box-size);
     padding: 0;
     justify-content: center;
 }
 .prepareExam .imgBox {
-    height: 23vh;
+    height: var(--height-box-size);
     border: 3px solid #3f3fea !important;
     border-radius: 16px;
     overflow: hidden;
@@ -73,11 +78,16 @@ main {
     padding-top: 1vh;
     padding-bottom: 1vh;
 }
+.prepareExam .imgBox .inboxText {
+    margin-bottom: 1vh;
+    font-size: var(--height-small-font);
+    
+}
 
 /* GPS 허용 필수 .. Box */
 .prepareExam .box0 .img0 {
-    height: 80%;
-    margin-top: 10%;
+    height: 65%;
+    margin-top: 15%;
 }
 
 /* 시험에 불필요한 .. Box */
@@ -94,11 +104,7 @@ main {
     padding-left: 8%;
     padding-right: 8%;
 }
-.prepareExam .box2 .idField {
-    margin-top: 1.4vh;
-    font-size: 1.4vh;
-}
-.prepareExam .box2 .lecturer {
+.prepareExam .box2 .lecturerField {
     margin-top: 30%;
 }
 
@@ -141,6 +147,7 @@ footer {
 }
 
 .userInfoBox {
+    min-width: 110px;
     width: 25vw;
     margin-bottom: 1vh;
     margin-right: 1vh;
@@ -173,23 +180,22 @@ footer {
         width: 1.5vw;
     }
     .prepareExam {
+        width: var(--width-box-size);
         margin: 0;
-        width: 17vw;
     }
     .prepareExam .imgBox {
-        height: 17vw;
+        height: var(--width-box-size);
     }
-    .prepareExam .imgBox .idField {
-        font-size: 1vw;
+    .prepareExam .imgBox .inboxText {
+        font-size: var(--width-small-font);
     }
     .prepareExam .command {
-        position: relative;
         margin-top: 1.5vh;
-        font-size: 1vw;
+        font-size: var(--width-basic-font) !important;
     }
     .arrow {
         height: auto;
-        padding-top: 7vw;
+        padding-top: 6vw;
         display: block;
     }
     .arrow img {
@@ -202,6 +208,6 @@ footer {
     }
     .userInfoBox {
         width: 14vw; 
-        font-size: 1vw;
+        font-size: var(--width-basic-font) !important;
     }
 }
