@@ -21,7 +21,7 @@
         .modal-content {
             position: relative;
             top:-13px;
-            left: -17px;
+            left:-17px;
             margin: auto;
             width: 105%;
             height: 100%;
@@ -41,7 +41,7 @@
 </head>
 <body onload="open_original_exam();">
     <button class="btn btn-default" onclick="dialog.open();">Reopen</button>
-    <div id="dialog">
+    <div id="dialog" style="display: none;">
         <div data-role="header" class="modal-header" style="display: block;background-color: #F4F5F6;">
             <div class="title-wrap text-center">
                 <h6 data-role="title">시험지 원본 보기</h6>
@@ -52,7 +52,7 @@
         </div>
         <!-- Embed Google Docs -->
         <div data-role="body" id="org_exam_dialog" class="modal_prompt_new_exam modal-content" style="border:none;padding:0;">
-            <div class="modal-content-prompt_new_exam" id="org_exam_content" style="width:105%;height:100%;">
+            <div class="modal-content-prompt_new_exam" id="org_exam_content" style="width:110%;height:100%;">
             </div>
         </div>
         <!-- <div data-role="footer">
