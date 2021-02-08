@@ -27,34 +27,46 @@
             margin: 0;
             width: 100%;
             height: 100%;
-            font-family: 'roboto';
+            font: normal normal medium 14px/16px Roboto !important;
         }
         
         /* Bootstrap Buttons */
         .btn-primary {
-            margin: 0;
-            padding: 5px;
+            margin: auto;
+            padding: auto;
             background-color: #3f3fea !important;
-            border: none !important;
+            border: 1px solid #3f3fea !important;
             border-radius: 7px !important;
-            font-size: var(--height-basic-font);
         }
-        .btn-primary:hover {
+        .btn-secondary {
+            margin: auto;
+            padding: auto;
+            color: black !important;
+            background-color: white !important;
+            border: 1px solid black !important;
+            border-radius: 7px !important;
+        }
+        .btn-primary:hover, .btn-secondary:hover {
             background-color: gray !important;
             border: none;
         }
         .btn-image {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
         }
-        .userInfoBox {
-            padding: 5px;
-            background-color: white;
-            border: 1px solid black;
-            border-radius: 7px;
+        .boxes {
+            min-width: 600px;
         }
-        .boxes, .buttons {
-            min-width: 500px;
+        .buttons {
+            min-width: 440px;
+        }
+        footer {
+            position:absolute;
+            bottom: 0; 
+            display:flex;
+            justify-content:space-between; 
+            background-color:#F4F5F6;
+            overflow: hidden;
         }
     </style>
     <!-- Font -->
@@ -63,25 +75,30 @@
     <title>Toslide Exam</title>
 </head>
 <body>
-    <iframe src="https://docs.google.com/document/d/16GTF9FTKwSLBxjIezqXmzvj9x6Lq8qLV/edit" width="100%"></iframe>
+    <iframe src="https://docs.google.com/document/d/16GTF9FTKwSLBxjIezqXmzvj9x6Lq8qLV/edit" width="100%" height="94%"></iframe>
 
-    <footer class="container-fluid position-absolute bottom-0 d-flex justify-content-between" style="background-color: #F4F5F6;">
-        <div class="boxes m-3 d-flex justify-content-start">
-            <label for="timer" class="userInfoBox text-center me-3">00:00:00</label>
-            <span class="userInfoBox lecturerField me-3">
-                <label for="lecturerId">toslide1234567890@gmail.com</label>
-            </span>
-            <span class="userInfoBox studentField d-flex me-3">
+    <footer class="container-fluid">
+        <div class="boxes d-flex my-3">
+            <button class="btn btn-secondary mx-3 ">
+                <label for="timer" class="text-center">00 : 00 : 00</label>
+            </button>
+            <button class="lecturerField btn btn-secondary mx-3 ">
+                <label for="lecturerId" class="">toslide1234567890@gmail.com</label>
+            </button>
+            <button class="studentField btn btn-secondary mx-3 ">
                 <label for="studentId">B0000000</label>
                 <label for="studentName">황희대</label>
-            </span>
-        </div>
-        <div class="buttons m-3 d-flex justify-content-end">
-            <button class="viewOriginal btn btn-primary me-3">시험 원본 보기</button>
-            <button class="sendMessage btn btn-primary me-3" type="button" onclick="do_sending()">
-                <img src="./img/exam/send.png" class="btn-image">메시지
             </button>
-            <button class="activeWindows btn btn-primary me-3">Active Windows</button>
+        </div>
+        <div class="buttons d-flex justify-content-end my-3">
+            <button class="viewOriginal btn btn-primary mx-3 ">시험 원본 보기</button>
+            <button class="sendMessage btn btn-primary mx-3 " type="button" onclick="do_sending()">
+                <!-- <img src="./img/exam/send.png" class="btn-image mr-2"> -->
+                <span>
+                    메시지    
+                </span>
+            </button>
+            <button class="activeWindows btn btn-primary mx-3 ">Active Windows</button>
         </div>
     </footer>
 
