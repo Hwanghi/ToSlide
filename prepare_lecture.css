@@ -7,8 +7,8 @@ Misc Properties (cursor, overflow, z-index) */
 
 :root {
   --box-size   : 270px;
-  --small-font : 14px;
-  --basic-font : 16px;
+  --small-font : 16px;
+  --basic-font : 24px;
 }
 * {
   margin: 0;
@@ -35,7 +35,7 @@ html, body {
   border: none;
 }
 .btnImage {
-  width:16px;
+  width:24px;
   margin-right:4px;
 }
 
@@ -107,9 +107,9 @@ footer {
 
 .userInfoBox {
   margin-left:24px;
-  padding: 8px;
+  padding: 8px 12px 8px 12px;
   background-color: white;
   box-shadow: 0px 0px 8px #0000001A;
-  border-radius: 5px;
+  border-radius: 16px;
   font-size: var(--basic-font);
 }
