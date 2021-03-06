@@ -21,6 +21,7 @@ html, body {
   margin: 0;
   font-size: var(--basic-font);
   font-family: 'roboto';
+  overflow: hidden;
 }
 u {
   all: unset;
@@ -49,6 +50,9 @@ header .caution {
 
 
 /* Main */
+.toslide-manual {
+  overflow: hidden;
+}
 .lecturerField .subTitle {
   margin-bottom: 0.8em;
   color: #7C7D80;
