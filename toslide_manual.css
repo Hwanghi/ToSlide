@@ -31,7 +31,6 @@ u {
 /* Header */
 header {
   margin: 1.4em 0 1.4em 0;
-  width: 900px;
   color:#3F3FEA;
 }
 header .logo {
@@ -47,12 +46,6 @@ header .caution {
   font-size: 0.8em;
   opacity: 70%;
 }
-
-
-/* Main */
-.toslide-manual {
-  overflow: hidden;
-}
 .lecturerField .subTitle {
   margin-bottom: 0.8em;
   color: #7C7D80;
@@ -64,6 +57,11 @@ header .caution {
   color: #3F3FEA;
   font-size: 1em;
   font-weight: var(--medium);
+}
+
+/* Main */
+.toslide-manual {
+  overflow: hidden;
 }
 .imgBox {
   width: 27%;
@@ -92,3 +90,25 @@ header .caution {
   color: #000000E5;
 }
 
+@media(max-height:700px) and (min-width:991px) {
+  html, body {
+    font-size: 2.5vh; 
+  }
+  .imgBox {
+    width: auto;
+    height: 60vh;
+    text-align: center;
+  }
+  .sign {
+    width: auto;
+    height: 80%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .arrowBox {
+    width: 8%;
+    height: 100%;
+    text-align: center;
+  }
+}
