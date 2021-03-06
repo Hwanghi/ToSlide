@@ -5,7 +5,7 @@ Typography Properties (font-size, font-family, text-align, text-transform)
 Misc Properties (cursor, overflow, z-index) */
 
 :root {
-  --basic-font : 1.5vw;
+  --basic-font : 1.3vw;
   --regular : 400;
   --medium  : 500;
   --bold    : 700;
@@ -64,17 +64,17 @@ header .caution {
   overflow: hidden;
 }
 .imgBox {
-  width: 27%;
+  width: 29%;
   height: auto;
 }
 .sign {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: auto;
 }
 .arrowBox {
-  width: 8%;
-  padding:15% 1% 0 1%;
+  width: 6%;
+  padding:20% 0 0 0;
   text-align: center;
 }
 .arrow {
