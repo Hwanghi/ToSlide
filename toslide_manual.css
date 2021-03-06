@@ -5,7 +5,7 @@ Typography Properties (font-size, font-family, text-align, text-transform)
 Misc Properties (cursor, overflow, z-index) */
 
 :root {
-  --basic-font : 26px;
+  --basic-font : 1.5vw;
   --regular : 400;
   --medium  : 500;
   --bold    : 700;
@@ -49,9 +49,6 @@ header .caution {
 
 
 /* Main */
-.toslide-manual {
-  min-width: 1500px;
-}
 .lecturerField .subTitle {
   margin-bottom: 0.8em;
   color: #7C7D80;
